@@ -9,10 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-final class Item {
-    var timestamp: Date
+public class Item {
+    public var tasks: [String]
+    public var date: Date
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    public init(tasks: [String] = [], date: Date = Date()) {
+        self.tasks = tasks
+        self.date = date
     }
 }
