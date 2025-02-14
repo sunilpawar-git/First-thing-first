@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		10E22BA72D574A2D00F94A6E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E22BA62D574A2D00F94A6E /* XCTest.framework */; };
 		10E22BA82D574A2D00F94A6E /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10E22BA62D574A2D00F94A6E /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		10E22BB72D576BB100F94A6E /* tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 10E22BB62D576BB100F94A6E /* tick.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		10E22B872D5748D200F94A6E /* First thing firstTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First thing firstTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E22B912D5748D200F94A6E /* First thing firstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First thing firstUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E22BA62D574A2D00F94A6E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		10E22BB62D576BB100F94A6E /* tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tick.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -116,7 +114,6 @@
 				10E22B942D5748D200F94A6E /* First thing firstUITests */,
 				10E22BA52D574A2C00F94A6E /* Frameworks */,
 				10E22B742D5748CF00F94A6E /* Products */,
-				10E22BB62D576BB100F94A6E /* tick.wav */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E22BB72D576BB100F94A6E /* tick.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

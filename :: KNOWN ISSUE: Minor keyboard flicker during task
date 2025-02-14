@@ -1,0 +1,12 @@
+// KNOWN ISSUE: Minor keyboard flicker during task addition
+// Root causes:
+// 1. View re-rendering on state updates
+// 2. Focus state management during updates
+// 3. Async operations timing
+
+// Potential solutions to explore:
+// 1. Use ViewModifier to isolate keyboard handling
+// 2. Implement custom focus management
+// 3. Batch state updates
+// 4. Use custom input handling
+// 5. Implement proper state management pattern
