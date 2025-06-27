@@ -78,6 +78,8 @@ struct AddTaskSheet: View {
     @State private var title = ""
     @State private var date = Date()
     
+    @FocusState private var isTitleFieldFocused: Bool // New focus state
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -88,6 +90,9 @@ struct AddTaskSheet: View {
                 HStack {
                     TextField("What do you need to do?", text: $title)
                         .textFieldStyle(.roundedBorder)
+                        .submitLabel(.done)
+                        .onSubmit(addTask)
+                        .focused($isTitleFieldFocused) // Apply focus state
                     
                     Button(action: addTask) {
                         Image(systemName: "arrow.right.circle.fill")
@@ -106,6 +111,11 @@ struct AddTaskSheet: View {
             }
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
+        .onAppear { // Set focus when the sheet appears
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Small delay for animation
+                isTitleFieldFocused = true
+            }
+        }
     }
     
     private func addTask() {
@@ -120,6 +130,8 @@ struct AddTaskSheet: View {
         // Haptic feedback
         let haptic = UIImpactFeedbackGenerator(style: .medium)
         haptic.impactOccurred()
+        
+        SoundManager.shared.playAddTaskSound() // Add tick sound
         
         dismiss()
     }
