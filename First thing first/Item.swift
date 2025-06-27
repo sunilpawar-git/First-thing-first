@@ -10,11 +10,13 @@ import SwiftData
 
 @Model
 public class Item {
-    public var tasks: [String]
+    public var title: String
+    public var isCompleted: Bool
     public var date: Date
     
-    public init(tasks: [String] = [], date: Date = Date()) {
-        self.tasks = tasks
+    public init(title: String, isCompleted: Bool = false, date: Date = Date()) {
+        self.title = title
+        self.isCompleted = isCompleted
         self.date = date
     }
 }
