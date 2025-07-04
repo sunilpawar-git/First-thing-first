@@ -8,11 +8,11 @@
 import SwiftData
 
 struct AppSchemaMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] {
+    public static var schemas: [any VersionedSchema.Type] {
         [Item.self]
     }
 
-    static var migrationStages: [MigrationStage] {
+    public static var migrationStages: [MigrationStage] {
         [
             // Add migration stages here if needed
         ]
