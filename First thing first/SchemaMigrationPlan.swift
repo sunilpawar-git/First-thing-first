@@ -9,7 +9,7 @@ import SwiftData
 
 struct AppSchemaMigrationPlan: SchemaMigrationPlan {
     public static var schemas: [any VersionedSchema.Type] {
-        [Item.self]
+        [FirstThingFirstSchema.self]
     }
 
     public static var migrationStages: [MigrationStage] {
