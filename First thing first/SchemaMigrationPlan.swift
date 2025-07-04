@@ -7,7 +7,7 @@
 
 import SwiftData
 
-struct AppSchemaMigrationPlan: SchemaMigrationPlan {
+enum AppSchemaMigrationPlan: SchemaMigrationPlan {
     public static var schemas: [any VersionedSchema.Type] {
         [FirstThingFirstSchema.self]
     }
