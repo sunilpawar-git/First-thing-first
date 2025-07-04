@@ -14,6 +14,6 @@ struct First_thing_firstApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(for: Item.self, migrationPlan: AppSchemaMigrationPlan.self)
     }
 }
